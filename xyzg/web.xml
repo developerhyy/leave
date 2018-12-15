@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         version="2.5">
+
+    <display-name>WebApp</display-name>
+    <description></description>
+
+    <servlet>
+        <servlet-name>ISBServlet</servlet-name>
+        <servlet-class>cn.dy.base.framework.esb.transport.adapter.IsbJsonXmlServlet</servlet-class>
+
+        <!--附件上传的默认路径-->
+        <init-param>
+            <param-name>attach_file_path</param-name>
+            <param-value>./file_attach</param-value>
+        </init-param>
+
+        <!--附件上传的禁止格式-->
+        <init-param>
+            <param-name>file_attach_suff_names</param-name>
+            <param-value>js|jsp|exe|bat|reg|sh|dll|ocx</param-value>
+        </init-param>
+
+        <!--附件上传的默认最大尺寸，单位byte-->
+        <init-param>
+            <param-name>file_attach_max_size</param-name>
+            <param-value>10240000</param-value>
+        </init-param>
+
+        <!--不需要进行服务检查的服务集合，多个之间可以使用|或者;分隔，如果此字段写为*则表示所有服务都可以不检查-->
+        <!--
+        <init-param>
+            <param-name>un_checks</param-name>
+            <param-value></param-value>
+        </init-param>
+        -->
+
+        <!--服务返回结果是否采取GZIP压缩 -->
+        <init-param>
+            <param-name>use_gzip</param-name>
+            <param-value>true</param-value>
+        </init-param>
+
+        <!--服务返回结果内容超出多少才启用GZIP压缩，单位byte，只有use_gzip为true才有意义 -->
+        <init-param>
+            <param-name>exceed_size</param-name>
+            <param-value>10240</param-value>
+        </init-param>
+
+
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+
+    <servlet>
+        <servlet-name>CXFServlet</servlet-name>
+        <servlet-class>cn.dy.base.framework.esb.transport.adapter.CXFServlet</servlet-class>
+
+        <init-param>
+            <param-name>serviceName</param-name>
+            <param-value>/EsbSoapService</param-value>
+        </init-param>
+
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+
+    <servlet-mapping>
+        <servlet-name>CXFServlet</servlet-name>
+        <url-pattern>/webservice/*</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet-mapping>
+        <servlet-name>ISBServlet</servlet-name>
+        <url-pattern>/service</url-pattern>
+    </servlet-mapping>
+
+
+    <filter>
+        <filter-name>ConsoleFilter</filter-name>
+        <filter-class>cn.dy.base.framework.esb.transport.adapter.ConsoleFilter</filter-class>
+        <init-param>
+            <param-name>userName</param-name>
+            <param-value>cat</param-value>
+        </init-param>
+        <init-param>
+            <param-name>userPwd</param-name>
+            <param-value>cat</param-value>
+        </init-param>
+
+    </filter>
+
+
+    <filter>
+        <filter-name>CharacterEncodingFilter</filter-name>
+        <filter-class>cn.dy.base.framework.esb.transport.adapter.CharacterEncodingFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>utf-8</param-value>
+        </init-param>
+
+        <init-param>
+            <param-name>token_name</param-name>
+            <param-value>token_id</param-value>
+        </init-param>
+
+        <init-param>
+            <param-name>no_checks</param-name>
+            <param-value>
+             /weixin/;/ucard/wx/;/console/;/service;/webservice/;/login.jsp;*.jpg;*.png;*.css;*.js;*.gif;/wx/
+            </param-value>
+        </init-param>
+
+
+        <init-param>
+            <param-name>checkServiceName</param-name>
+            <param-value>cn.dy.base.system.service.LoginService</param-value>
+        </init-param>
+
+        <init-param>
+            <param-name>checkMethodName</param-name>
+            <param-value>check</param-value>
+        </init-param>
+
+
+        <init-param>
+            <param-name>error_page</param-name>
+            <param-value>/login.jsp</param-value>
+        </init-param>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>ConsoleFilter</filter-name>
+        <url-pattern>/console/*</url-pattern>
+    </filter-mapping>
+
+    <filter-mapping>
+        <filter-name>CharacterEncodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+
+    <listener>
+        <listener-class>cn.dy.base.framework.esb.transport.adapter.IsbInitContextListen</listener-class>
+    </listener>
+
+    <welcome-file-list>
+        <welcome-file>login.jsp</welcome-file>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+                <!-- 跳转二维码页面-->
+	<!--<servlet>
+		<servlet-name>TwoCode</servlet-name>
+		<servlet-class>cn.dy.base.weixinapi.servlet.TwoCode</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>TwoCode</servlet-name>
+		<url-pattern>/TwoCode</url-pattern>
+	</servlet-mapping>-->
+	<!--     获取生成二维码所要的ProToken   -->
+<!--
+	<servlet>
+		<servlet-name>GetProToken</servlet-name>
+		<servlet-class>cn.dy.base.weixinapi.servlet.GetProToken</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>GetProToken</servlet-name>
+		<url-pattern>/GetProToken</url-pattern>
+	</servlet-mapping>
+-->
+	<!--     获取二维码回调页面获取authorizer_access_token   -->
+<!--
+	<servlet>
+		<servlet-name>TwoCodeCallBack</servlet-name>
+		<servlet-class>cn.dy.base.weixinapi.servlet.TwoCodeCallBack</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>TwoCodeCallBack</servlet-name>
+		<url-pattern>/TwoCodeCallBack</url-pattern>
+	</servlet-mapping> 
+	-->
+		<!--    获取微信支付回调信息    -->
+<!--
+	<servlet>
+		<servlet-name>PaymentCallBack</servlet-name>
+		<servlet-class>cn.dy.base.weixinapi.servlet.PaymentCallBack</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>PaymentCallBack</servlet-name>
+		<url-pattern>/PaymentCallBack</url-pattern>
+	</servlet-mapping>-->
+	
+<!--     获取用户信息   -->
+
+<!--	<servlet>
+		<servlet-name>UserInfo</servlet-name>
+		<servlet-class>cn.dy.base.weixinapi.servlet.UserInfo</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>UserInfo</servlet-name>
+		<url-pattern>/UserInfo</url-pattern>
+	</servlet-mapping>-->
+	<!--     微信 jssdk   -->
+
+<!--	<servlet>
+		<servlet-name>jsSDK</servlet-name>
+		<servlet-class>cn.dy.base.weixinapi.servlet.JsSDK</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>jsSDK</servlet-name>
+		<url-pattern>/jsSDK</url-pattern>
+	</servlet-mapping>-->
+		<!--     微信 消息回复    -->
+<!--
+	<servlet>
+		<servlet-name>WeiXinMsgServlet</servlet-name>
+		<servlet-class>cn.dy.base.weixinmsg.servlet.WeiXinMsgServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>WeiXinMsgServlet</servlet-name>
+		<url-pattern>/WeiXinMsgServlet</url-pattern>
+	</servlet-mapping>
+	
+  <servlet>
+    <servlet-name>UploadAPI</servlet-name>
+    <servlet-class>cn.dy.base.weixinapi.servlet.UploadAPI</servlet-class>
+  </servlet>
+
+	<servlet-mapping>
+	    <servlet-name>UploadAPI</servlet-name>
+	    <url-pattern>/UploadAPI</url-pattern>
+	</servlet-mapping>-->
+	
+<!--     微信验证阻截器    -->
+<!--<filter>
+      <filter-name>weixincheckFilter</filter-name>
+      <filter-class>cn.dy.base.weixinapi.servlet.CheckUserFilter</filter-class>      
+</filter>
+
+<filter-mapping>
+      <filter-name>weixincheckFilter</filter-name> 
+      <url-pattern>/weixin/*</url-pattern>
+      <dispatcher>REQUEST</dispatcher>
+      <dispatcher>FORWARD</dispatcher>
+</filter-mapping>
+<filter-mapping>
+      <filter-name>weixincheckFilter</filter-name> 
+      <url-pattern>/ucard/wx/*</url-pattern>
+      <dispatcher>REQUEST</dispatcher>
+      <dispatcher>FORWARD</dispatcher>
+</filter-mapping>
+<filter-mapping>
+      <filter-name>weixincheckFilter</filter-name> 
+      <url-pattern>/wx/*</url-pattern>
+      <dispatcher>REQUEST</dispatcher>
+      <dispatcher>FORWARD</dispatcher>
+</filter-mapping>-->
+</web-app>

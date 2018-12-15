@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+   <!--本管理池描述名称-->
+   <desc_name>数据库连接池管理器</desc_name>
+   
+   <!--是否已加密-->
+   <is_encrypt>Y</is_encrypt>
+   
+   <pool>
+     <!--数据库连接池名-->
+     <pool_name>DB_Default_System_Pool</pool_name>
+     
+     <!--数据库连接池描述-->
+     <pool_desc>默认数据库连接池</pool_desc>
+
+     <!--数据库驱动类名-->
+     <driver_class>com.mysql.jdbc.Driver</driver_class>
+
+     <!--JDBC连接地址  -->
+     <jdbc_url>jdbc:mysql://49.4.80.120:3306/attend?characterEncoding=UTF-8&amp;zeroDateTimeBehavior=round&amp;connectTimeout=5000</jdbc_url>
+
+     <!--登录数据库用户名-->
+     <username>ORuZnbRVMns=</username>
+
+     <!--登录数据库密码-->
+     <password>WB9BDBVbdYQ=</password>
+
+     <!--分区数 ，默认值2，最小1，推荐3-4，视应用而定-->
+     <part_count>1</part_count>
+
+     <!--每个分区的最小连接数-->
+     <min_conn_per_part>30</min_conn_per_part>
+
+     <!--每个分区的最大连接数-->
+     <max_conn_per_part>50</max_conn_per_part>
+     
+     <!--分区中每次连接增长数量-->
+     <acquire_increment>1</acquire_increment>
+     
+     <!--获取新连接的超时时长，单位：毫秒-->
+     <max_conn_timeout>1000</max_conn_timeout>
+     
+     <!--连接池中未使用的连接最大存活时间，单位：毫秒-->
+     <max_idle_time>600000</max_idle_time>
+     
+     <!--检查池内空闲连接的间隔时长，单位：毫秒-->
+     <test_interval>60000</test_interval>
+     
+     <!--连接失败重复尝试的次数-->
+     <retry_attempts>0</retry_attempts>
+     
+     <!--两次连接中间隔时长，单位：毫秒-->
+     <retry_delay>1000</retry_delay>
+     
+     <!--Sql执行超时时长，单位：毫秒-->
+     <execute_time_limit>10000</execute_time_limit>
+   </pool>   
+ </config>

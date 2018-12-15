@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<module>
+  <!-- 模块名，不得为空，使用英文名，在同一个服务容器里面此名称必须唯一 -->
+  <name>System</name>
+
+  <!-- 模块描述 -->
+  <desc>系统管理管理模块</desc>
+
+  <!-- 加载顺序，数字越小越先加载，默认为100 -->
+  <deploy_order>3</deploy_order>
+
+  <!-- 模块实现类名 -->
+  <imp_class>cn.dy.base.system.SystemModule</imp_class>
+
+  <!-- 是否在类变化的时候自动重加载 0：否 1：是 -->
+  <auto_reload>1</auto_reload>
+
+  <services>
+    <!-- 属性说明
+      1.interfaceClass：接口类名
+      2.aliasNames：服务别名，多个使用分号分隔
+      3.dependServices：依赖的服务名，多个使用分号分隔 
+      4.ver：版本号
+      5.auth：作者
+      6.desc：服务描述
+      7.requiredResource:针对接口方法所要求的资源集合 ,资源可以是一个工号，角色，权限等等； 允许定义多个方法的资源，使用分号分隔，每个方法要求的资源格式定义为 ：方法名=资源集合； 资源集合为多个资源号集合，使用逗号分隔，方法名可以为*表示所有方法 
+      8.ratio:请求权重，范围0-10，0表示不被分配请求，数字越大表示分配的请求越多，默认1
+    -->
+    <service ratio="1" requiredResource="" desc="用户登录服务"
+      auth="tangss" ver="1.0" dependServices="" aliasNames="LoginService"
+      interfaceClass="cn.dy.base.system.service.LoginService" /> 
+      
+    <service ratio="1" requiredResource="" desc="企业管理服务"
+      auth="tangss" ver="1.0" dependServices="" aliasNames="CorporationService"
+      interfaceClass="cn.dy.base.system.service.CorporationService" />
+      
+    <service ratio="1" requiredResource="" desc="人员管理服务"
+      auth="tangss" ver="1.0" dependServices="" aliasNames="StaffService"
+      interfaceClass="cn.dy.base.system.service.StaffService" />  
+      
+    <service ratio="1" requiredResource="" desc="角色管理服务"
+      auth="tangss" ver="1.0" dependServices="" aliasNames="RoleService"
+      interfaceClass="cn.dy.base.system.service.RoleService" />
+      
+    <service ratio="1" requiredResource="" desc="功能管理服务"
+      auth="tangss" ver="1.0" dependServices="" aliasNames="FunctionService"
+      interfaceClass="cn.dy.base.system.service.FunctionService" />
+          
+    <service ratio="1" requiredResource="" desc="操作管理服务"
+      auth="tangss" ver="1.0" dependServices="" aliasNames="OperationService"
+      interfaceClass="cn.dy.base.system.service.OperationService" />
+      
+    <service ratio="1" requiredResource="" desc="获取省份，地市，县市信息接口"
+      auth="shenwc" ver="1.0" dependServices="" aliasNames="GetAreaInfoServer"
+      interfaceClass="cn.dy.base.system.service.GetAreaInfoServer" />
+      
+    <service ratio="1" requiredResource="" desc="获取数据字典服务"
+      auth="tangss" ver="1.0" dependServices="" aliasNames="DataDictService"
+      interfaceClass="cn.dy.base.system.service.DataDictService" />                               
+  </services>
+  
+  <shares>
+	 <share_class name="cn.dy.base.system.support.Authentication" />
+  </shares>  
+  
+	<pool shared="0" name="">
+		<!-- 执行线程组，允许配置多个执行线程组 
+		          属性queue_size：等待执行队列大小，默认不设置则无限制； 
+		          属性asyn:是否异步执行，默认false      
+		          属性thread_min_size：执行线程池最小个数，默认为1; 
+			属性thread_max_size：执行线程池最大个数，默认为10; 
+			属性max_wait_time：服务执行最长等待时长，单位ms，默认3000; 
+			属性keep_alive_time：大于执行线程池最小个数的线程，空闲线程最大等待时长，单位ms，默认5000; 
+			属性assign_services：关联服务名，各个服务名使用分号分隔，*表示所有服务,
+			也可以是具体的方法例如服务a的方法b可写成a.b -->
+		
+		<executePool queue_size="3000" 
+		    asyn="false" 
+		    thread_min_size="1"
+			thread_max_size="1" 
+			max_wait_time="180000" 
+			keep_alive_time="60000"
+			assign_services="cn.dy.base.system.service.OperationService.writeOperationLog" />
+			
+		<executePool queue_size="100" 
+		    asyn="false" 
+		    thread_min_size="1"
+			thread_max_size="5" 
+			max_wait_time="10000" 
+			keep_alive_time="60000"
+			assign_services="cn.dy.base.system.service.LoginService" />
+			
+        <executePool queue_size="100" 
+		    asyn="false" 
+		    thread_min_size="1"
+			thread_max_size="5" 
+			max_wait_time="10000" 
+			keep_alive_time="60000"
+			assign_services="cn.dy.base.system.service.StaffService" />		
+				
+	</pool>  
+</module>

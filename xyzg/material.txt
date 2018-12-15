@@ -1,0 +1,14 @@
+政工管理系统：
+https://v5i2xx.axshare.com
+密码：123456
+
+http://49.4.80.120:8001/xyzg/system/login.jsp admin/Aa000000 这个是云平台的地址，以后做开发测试环境用
+
+服务器公网IP 49.4.80.120   SFTP账号密码：zkzx/Zkzx123456
+
+数据库 ip:49.4.80.120 账号密码 root/123456 数据库名：attend
+
+政工管理系统：
+https://v5i2xx.axshare.com pwd:123456
+
+页面模板 http://49.4.80.120:8001/xyzg/test/index.jsp

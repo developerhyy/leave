@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+<!-- 模块名 -->
+<name>DatacenterModule</name>
+<!-- 模块描述 -->
+<desc>数据中心模块服务</desc>
+ <!-- 加载顺序，数字越小越先加载，默认为100 -->
+    <deploy_order>100</deploy_order>
+    <!-- 模块实现类名 -->
+    <imp_class>cn.dy.car.datacenter.DatacenterImp</imp_class>
+
+    <!-- 是否在类变化的时候自动重加载 0：否 1：是 -->
+    <auto_reload>1</auto_reload>
+      <!-- 类加载策略定义
+      1.属性name：类加载器名，空的话则为采取模块名
+      2.policy：类加载顺序策略，默认为**=this;**=parent;**=system，表示本类加载器优先，然后父加载器次之，系统类加载器最后
+    -->
+    <classloader name="" policy="**=this;**=parent;**=system"/>
+    <services>
+     <!-- 属性说明
+          1.interfaceClass：接口类名
+          2.aliasNames：服务别名，多个使用分号分隔
+          3.dependServices：依赖的服务名，多个使用分号分隔
+          4.ver：版本号
+          5.auth：作者
+          6.desc：服务描述
+          7.requiredResource:针对接口方法所要求的资源集合 ,资源可以是一个工号，角色，权限等等； 允许定义多个方法的资源，使用分号分隔，每个方法要求的资源格式定义为 ：方法名=资源集合； 资源集合为多个资源号集合，使用逗号分隔，方法名可以为*表示所有方法
+          8.ratio:请求权重，范围0-10，0表示不被分配请求，数字越大表示分配的请求越多，默认1
+        -->
+    <service
+    ratio="1" requiredResource="" desc="数据中心管理接口"
+    auth="hzc" ver="1.0" dependServices="" aliasNames="DatacenterService"
+    interfaceClass="cn.dy.car.datacenter.service.DatacenterService" 
+    />
+    <!-- 关联的服务调度池，此配置项可以没有
+      1.属性share表示该池是否可共享出去给其他模块使用，默认0不共享,1表示共享
+      2.name:调度池名，必须保证在同一个服务容器中唯一,默认为模块名
+    -->
+    <pool name="" shared="0">
+    <!-- 执行线程组，允许配置多个执行线程组
+          属性queue_size：等待执行队列大小，默认不设置则无限制
+          属性asyn:是否异步执行，默认false
+          属性thread_min_size：执行线程池最小个数，默认为1
+          属性thread_max_size：执行线程池最大个数，默认为10
+          属性max_wait_time：服务执行最长等待时长，单位ms，默认3000;
+          属性keep_alive_time：大于执行线程池最小个数的线程，空闲线程最大等待时长，单位ms，默认5000
+          属性assign_services：关联服务名，各个服务名使用分号分隔，*表示所有服务, 也可以是具体的方法例如服务a的方法b可写成a.b -->
+    <executePool 
+    assign_services="cn.dy.car.datacenter.service.DatacenterService.setDatacenterExtend"
+    keep_alive_time="5000" max_wait_time="900000" thread_max_size="3"
+    thread_min_size="3" asyn="false" queue_size="100"/>
+	<executePool 
+    assign_services="cn.dy.car.datacenter.service.DatacenterService.setDatacenterExtendHp"
+    keep_alive_time="5000" max_wait_time="900000" thread_max_size="3"
+    thread_min_size="3" asyn="false" queue_size="100"/>
+	<executePool 
+    assign_services="cn.dy.car.datacenter.service.DatacenterService.setDatacenterCondition"
+    keep_alive_time="5000" max_wait_time="900000" thread_max_size="3"
+    thread_min_size="3" asyn="false" queue_size="100"/>
+	<executePool 
+    assign_services="cn.dy.car.datacenter.service.DatacenterService.setDatacenterConditionHp"
+    keep_alive_time="5000" max_wait_time="900000" thread_max_size="3"
+    thread_min_size="3" asyn="false" queue_size="100"/>
+	<executePool 
+    assign_services="cn.dy.car.datacenter.service.DatacenterService.setDatacenterLocation"
+    keep_alive_time="5000" max_wait_time="900000" thread_max_size="3"
+    thread_min_size="3" asyn="false" queue_size="100"/>
+	<executePool 
+    assign_services="cn.dy.car.datacenter.service.DatacenterService.setDatacenterMessage"
+    keep_alive_time="5000" max_wait_time="900000" thread_max_size="3"
+    thread_min_size="3" asyn="false" queue_size="100"/>
+	<executePool 
+    assign_services="cn.dy.car.datacenter.service.DatacenterService.setDatacenterCollision"
+    keep_alive_time="5000" max_wait_time="900000" thread_max_size="3"
+    thread_min_size="3" asyn="false" queue_size="100"/>
+	<executePool 
+    assign_services="cn.dy.car.datacenter.service.DatacenterService.setDatacenterFailure"
+    keep_alive_time="5000" max_wait_time="900000" thread_max_size="3"
+    thread_min_size="3" asyn="false" queue_size="100"/>
+	<executePool 
+    assign_services="cn.dy.car.datacenter.service.DatacenterService.setDatacenterIgnition"
+    keep_alive_time="5000" max_wait_time="900000" thread_max_size="3"
+    thread_min_size="3" asyn="false" queue_size="100"/>
+	<executePool 
+    assign_services="cn.dy.car.datacenter.service.DatacenterService.setDatacenterFault"
+    keep_alive_time="5000" max_wait_time="900000" thread_max_size="3"
+    thread_min_size="3" asyn="false" queue_size="100"/>
+    </pool>
+    </services>
+</module>

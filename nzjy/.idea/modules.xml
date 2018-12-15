@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/LeaveApplicationModule/LeaveApplicationModule.iml" filepath="$PROJECT_DIR$/LeaveApplicationModule/LeaveApplicationModule.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nzjy.iml" filepath="$PROJECT_DIR$/nzjy.iml" />
+    </modules>
+  </component>
+</project>

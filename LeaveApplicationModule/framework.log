@@ -1,0 +1,1173 @@
+2018-12-09 12:30:20.629 [Thread-2] WARN  c.dy.base.framework.esb.container.ContainerFactory - 未找到服务容器配置文件container.xml
+2018-12-09 12:31:43.592 [Thread-2] WARN  cn.dy.base.framework.esb.manage.imp.ManagerConfig - 未查找到对应的服务管理器配置文件manager.xml!
+2018-12-09 12:31:43.593 [Thread-2] WARN  c.dy.base.framework.esb.container.ContainerFactory - 未找到服务容器配置文件container.xml
+2018-12-09 12:31:43.604 [Thread-2] WARN  cn.dy.base.framework.esb.call.imp.CallerConfigImp - 未查找到对应的服务调用器配置文件caller.xml!
+2018-12-09 12:31:43.661 [Thread-2] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.init(PubDataDict.java:58) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.DataDictFactory.getFactory(DataDictFactory.java:61) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.DataDictFactory.getXMLFactory(DataDictFactory.java:107) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.rmi.RmiNatManager.init(RmiNatManager.java:38) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.rmi.RmiNatManager.<init>(RmiNatManager.java:74) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.rmi.RmiNatManager.create(RmiNatManager.java:81) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.container.imp.ServiceContainerImp.getRmiUrl(ServiceContainerImp.java:353) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.call.imp.ServiceAgentImp.setLocalServiceContainer(ServiceAgentImp.java:62) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.ServiceEngineImp.<init>(ServiceEngineImp.java:33) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.ServiceEngineImp.create(ServiceEngineImp.java:47) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$1.run(PubDataDict.java:70) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 12:31:43.661 [Thread-2] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 12:31:43.662 [Thread-2] WARN  cn.dy.base.framework.esb.rmi.RmiNatManager - 
+java.lang.NullPointerException: null
+	at cn.dy.base.framework.esb.rmi.RmiNatManager.init(RmiNatManager.java:38) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.rmi.RmiNatManager.<init>(RmiNatManager.java:74) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.rmi.RmiNatManager.create(RmiNatManager.java:81) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.container.imp.ServiceContainerImp.getRmiUrl(ServiceContainerImp.java:353) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.call.imp.ServiceAgentImp.setLocalServiceContainer(ServiceAgentImp.java:62) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.ServiceEngineImp.<init>(ServiceEngineImp.java:33) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.ServiceEngineImp.create(ServiceEngineImp.java:47) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$1.run(PubDataDict.java:70) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 12:31:43.662 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - started...
+2018-12-09 12:31:43.705 [Thread-2] WARN  cn.dy.base.framework.dict.PubDataDict - SystemUtil.getLocalIPs().size1
+2018-12-09 12:31:43.705 [Thread-2] WARN  cn.dy.base.framework.dict.PubDataDict - SystemUtil.getLocalIPs()192.168.1.2
+2018-12-09 12:31:43.764 [Thread-2] WARN  cn.dy.base.framework.esb.rmi.RmiServer - 
+java.lang.NullPointerException: null
+	at java.util.Hashtable.put(Hashtable.java:514) ~[na:1.7.0_71]
+	at java.util.Properties.setProperty(Properties.java:161) ~[na:1.7.0_71]
+	at java.lang.System.setProperty(System.java:787) ~[na:1.7.0_71]
+	at cn.dy.base.framework.esb.rmi.StarNetIctRmiServer.publish(StarNetIctRmiServer.java:97) ~[geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.rmi.RmiServer.publish(RmiServer.java:28) ~[geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$1.run(PubDataDict.java:80) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 12:31:43.765 [Thread-2] WARN  cn.dy.base.framework.dict.PubDataDict - publish rmi://192.168.1.2:8686/DB/cn.dy.base.framework.dict.IRemoteDict use instance [cn.dy.base.framework.dict.DBDataDict@6c970086|cn.dy.base.framework.dict.DBDataDict]
+2018-12-09 12:32:43.665 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 12:32:43.665 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 12:38:18.564 [Thread-2] WARN  c.dy.base.framework.esb.container.ContainerFactory - 未找到服务容器配置文件container.xml
+2018-12-09 12:38:18.568 [Thread-2] WARN  cn.dy.base.framework.esb.manage.imp.ManagerConfig - 未查找到对应的服务管理器配置文件manager.xml!
+2018-12-09 12:38:18.568 [Thread-2] WARN  c.dy.base.framework.esb.container.ContainerFactory - 未找到服务容器配置文件container.xml
+2018-12-09 12:38:27.522 [Thread-2] WARN  cn.dy.base.framework.esb.call.imp.CallerConfigImp - 未查找到对应的服务调用器配置文件caller.xml!
+2018-12-09 12:40:33.364 [Thread-2] WARN  c.dy.base.framework.esb.container.ContainerFactory - 未找到服务容器配置文件container.xml
+2018-12-09 12:42:38.109 [Thread-2] WARN  cn.dy.base.framework.esb.manage.imp.ManagerConfig - 未查找到对应的服务管理器配置文件manager.xml!
+2018-12-09 12:42:38.663 [Thread-2] WARN  c.dy.base.framework.esb.container.ContainerFactory - 未找到服务容器配置文件container.xml
+2018-12-09 12:42:38.677 [Thread-2] WARN  cn.dy.base.framework.esb.call.imp.CallerConfigImp - 未查找到对应的服务调用器配置文件caller.xml!
+2018-12-09 12:42:38.685 [Thread-2] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.init(PubDataDict.java:58) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.DataDictFactory.getFactory(DataDictFactory.java:61) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.DataDictFactory.getXMLFactory(DataDictFactory.java:107) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.rmi.RmiNatManager.init(RmiNatManager.java:38) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.rmi.RmiNatManager.<init>(RmiNatManager.java:74) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.rmi.RmiNatManager.create(RmiNatManager.java:81) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.container.imp.ServiceContainerImp.getRmiUrl(ServiceContainerImp.java:353) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.call.imp.ServiceAgentImp.setLocalServiceContainer(ServiceAgentImp.java:62) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.ServiceEngineImp.<init>(ServiceEngineImp.java:33) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.ServiceEngineImp.create(ServiceEngineImp.java:47) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$1.run(PubDataDict.java:70) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 12:42:38.685 [Thread-2] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 12:42:38.686 [Thread-2] WARN  cn.dy.base.framework.esb.rmi.RmiNatManager - 
+java.lang.NullPointerException: null
+	at cn.dy.base.framework.esb.rmi.RmiNatManager.init(RmiNatManager.java:38) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.rmi.RmiNatManager.<init>(RmiNatManager.java:74) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.rmi.RmiNatManager.create(RmiNatManager.java:81) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.container.imp.ServiceContainerImp.getRmiUrl(ServiceContainerImp.java:353) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.call.imp.ServiceAgentImp.setLocalServiceContainer(ServiceAgentImp.java:62) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.ServiceEngineImp.<init>(ServiceEngineImp.java:33) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.ServiceEngineImp.create(ServiceEngineImp.java:47) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$1.run(PubDataDict.java:70) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 12:42:38.686 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - started...
+2018-12-09 12:42:38.725 [Thread-2] WARN  cn.dy.base.framework.dict.PubDataDict - SystemUtil.getLocalIPs().size1
+2018-12-09 12:42:38.725 [Thread-2] WARN  cn.dy.base.framework.dict.PubDataDict - SystemUtil.getLocalIPs()192.168.1.2
+2018-12-09 12:42:38.731 [Thread-2] WARN  cn.dy.base.framework.esb.rmi.RmiServer - 
+java.lang.NullPointerException: null
+	at java.util.Hashtable.put(Hashtable.java:514) ~[na:1.7.0_71]
+	at java.util.Properties.setProperty(Properties.java:161) ~[na:1.7.0_71]
+	at java.lang.System.setProperty(System.java:787) ~[na:1.7.0_71]
+	at cn.dy.base.framework.esb.rmi.StarNetIctRmiServer.publish(StarNetIctRmiServer.java:97) ~[geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.rmi.RmiServer.publish(RmiServer.java:28) ~[geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$1.run(PubDataDict.java:80) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 12:42:38.731 [Thread-2] WARN  cn.dy.base.framework.dict.PubDataDict - publish rmi://192.168.1.2:8686/DB/cn.dy.base.framework.dict.IRemoteDict use instance [cn.dy.base.framework.dict.DBDataDict@ff5dc6a|cn.dy.base.framework.dict.DBDataDict]
+2018-12-09 12:42:50.174 [DB Timeout Monitor Thread] WARN  cn.dy.base.framework.db.DBTimeoutMonitor - 发现数据库连接[com.jolbox.bonecp.ConnectionHandle@558d8140]执行sql超时[11424]ms,详细执行情况如下:
+1.开始时间:[2018-12-09 12:42:38],结束时间[未完成],执行的SQl【select sum(duration) from
+ bz_leave_application c LEFT JOIN ecc_contact_info d on c.apply_id = d.ID WHERE d.ID=1 AND c.sts<>3 
+ AND c.leave_type=3 and  c.create_time BETWEEN '2017-12-12 00:00:00' AND '2018-12-9 23:59:59'】,执行位置->线程[1]java.lang.Exception: Thread[main,5,main]
+	at cn.dy.base.framework.db.SessionTrace.beginWidthSql(SessionTrace.java:41)
+	at cn.dy.base.framework.db.TraceConnect.invoke(TraceConnect.java:213)
+	at com.sun.proxy.$Proxy0.prepareStatement(Unknown Source)
+	at org.springframework.jdbc.core.PreparedStatementCreatorFactory$PreparedStatementCreatorImpl.createPreparedStatement(PreparedStatementCreatorFactory.java:245)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:581)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:637)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:662)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:702)
+	at org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate.queryForObject(NamedParameterJdbcTemplate.java:178)
+	at org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate.queryForObject(NamedParameterJdbcTemplate.java:191)
+	at org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate.queryForInt(NamedParameterJdbcTemplate.java:218)
+	at org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate.queryForInt(NamedParameterJdbcTemplate.java:223)
+	at cn.dy.base.leaveapp.dao.SeniorityDao.getUsedFurloughDays(SeniorityDao.java:245)
+	at cn.dy.base.leaveapp.dao.SeniorityDao.setSeniorityDate(SeniorityDao.java:150)
+	at cn.dy.base.leaveapp.dao.SeniorityDao.getLeftFurloughDays(SeniorityDao.java:202)
+	at cn.dy.base.leaveapp.support.SeniorityServiceImpl.getLeftFurloughDays(SeniorityServiceImpl.java:58)
+	at cn.dy.base.leaveapp.test.Test.main(Test.java:76)
+
+
+2018-12-09 12:43:42.934 [Thread-2] WARN  c.dy.base.framework.esb.container.ContainerFactory - 未找到服务容器配置文件container.xml
+2018-12-09 12:43:42.938 [Thread-2] WARN  cn.dy.base.framework.esb.manage.imp.ManagerConfig - 未查找到对应的服务管理器配置文件manager.xml!
+2018-12-09 12:43:42.939 [Thread-2] WARN  c.dy.base.framework.esb.container.ContainerFactory - 未找到服务容器配置文件container.xml
+2018-12-09 12:45:15.169 [Thread-2] WARN  cn.dy.base.framework.esb.call.imp.CallerConfigImp - 未查找到对应的服务调用器配置文件caller.xml!
+2018-12-09 12:45:20.270 [Thread-2] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.init(PubDataDict.java:58) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.DataDictFactory.getFactory(DataDictFactory.java:61) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.DataDictFactory.getXMLFactory(DataDictFactory.java:107) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.rmi.RmiNatManager.init(RmiNatManager.java:38) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.rmi.RmiNatManager.<init>(RmiNatManager.java:74) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.rmi.RmiNatManager.create(RmiNatManager.java:81) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.container.imp.ServiceContainerImp.getRmiUrl(ServiceContainerImp.java:353) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.call.imp.ServiceAgentImp.setLocalServiceContainer(ServiceAgentImp.java:62) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.ServiceEngineImp.<init>(ServiceEngineImp.java:33) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.ServiceEngineImp.create(ServiceEngineImp.java:47) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$1.run(PubDataDict.java:70) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 12:45:20.270 [Thread-2] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 12:45:20.271 [Thread-2] WARN  cn.dy.base.framework.esb.rmi.RmiNatManager - 
+java.lang.NullPointerException: null
+	at cn.dy.base.framework.esb.rmi.RmiNatManager.init(RmiNatManager.java:38) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.rmi.RmiNatManager.<init>(RmiNatManager.java:74) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.rmi.RmiNatManager.create(RmiNatManager.java:81) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.container.imp.ServiceContainerImp.getRmiUrl(ServiceContainerImp.java:353) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.call.imp.ServiceAgentImp.setLocalServiceContainer(ServiceAgentImp.java:62) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.ServiceEngineImp.<init>(ServiceEngineImp.java:33) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.ServiceEngineImp.create(ServiceEngineImp.java:47) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$1.run(PubDataDict.java:70) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 12:45:20.278 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - started...
+2018-12-09 12:45:21.255 [Thread-2] WARN  cn.dy.base.framework.dict.PubDataDict - SystemUtil.getLocalIPs().size1
+2018-12-09 12:45:21.260 [Thread-2] WARN  cn.dy.base.framework.dict.PubDataDict - SystemUtil.getLocalIPs()192.168.1.2
+2018-12-09 12:45:56.786 [Thread-2] WARN  cn.dy.base.framework.esb.rmi.RmiServer - 
+java.lang.NullPointerException: null
+	at java.util.Hashtable.put(Hashtable.java:514) ~[na:1.7.0_71]
+	at java.util.Properties.setProperty(Properties.java:161) ~[na:1.7.0_71]
+	at java.lang.System.setProperty(System.java:787) ~[na:1.7.0_71]
+	at cn.dy.base.framework.esb.rmi.StarNetIctRmiServer.publish(StarNetIctRmiServer.java:97) ~[geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.rmi.RmiServer.publish(RmiServer.java:28) ~[geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$1.run(PubDataDict.java:80) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 12:45:56.787 [Thread-2] WARN  cn.dy.base.framework.dict.PubDataDict - publish rmi://192.168.1.2:8686/DB/cn.dy.base.framework.dict.IRemoteDict use instance [cn.dy.base.framework.dict.DBDataDict@6ef1c72|cn.dy.base.framework.dict.DBDataDict]
+2018-12-09 12:46:20.289 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 12:46:20.292 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 12:51:20.308 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 12:51:20.313 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 12:56:20.325 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 12:56:20.327 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 13:01:20.332 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 13:01:20.333 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 13:06:20.338 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 13:06:20.340 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 13:11:20.355 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 13:11:20.360 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 13:16:20.366 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 13:16:20.367 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 13:21:20.371 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 13:21:20.372 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 13:26:20.388 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 13:26:20.392 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 13:31:20.398 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 13:31:20.399 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 13:36:20.414 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 13:36:20.418 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 13:41:20.435 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 13:41:20.444 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 13:46:20.479 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 13:46:20.481 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 13:51:20.498 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 13:51:20.502 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 13:56:20.514 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 13:56:20.516 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 14:01:20.533 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 14:01:20.536 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 14:06:20.553 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 14:06:20.556 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 14:11:20.572 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 14:11:20.576 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 14:16:20.596 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 14:16:20.600 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 14:21:20.607 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 14:21:20.609 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 14:26:20.623 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 14:26:20.626 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 14:31:20.643 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 14:31:20.645 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 14:36:20.660 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 14:36:20.663 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 14:41:20.677 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 14:41:20.679 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 14:46:20.694 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 14:46:20.696 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 14:51:20.705 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 14:51:20.706 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 14:56:20.722 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 14:56:20.724 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 15:01:20.728 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 15:01:20.729 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 15:06:20.733 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 15:06:20.734 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 15:11:20.748 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 15:11:20.751 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 15:16:20.766 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 15:16:20.769 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 15:21:20.783 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 15:21:20.786 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 15:26:20.801 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 15:26:20.805 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 15:31:20.819 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 15:31:20.822 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 15:36:20.826 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 15:36:20.828 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 15:41:20.836 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 15:41:20.838 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 15:46:20.851 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 15:46:20.855 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 15:51:20.874 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 15:51:20.877 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 15:56:20.887 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 15:56:20.888 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 16:01:20.894 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 16:01:20.896 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 16:06:20.904 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 16:06:20.905 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 16:11:20.913 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 16:11:20.915 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 16:16:20.923 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 16:16:20.924 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 16:21:20.938 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 16:21:20.940 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 16:26:20.949 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 16:26:20.950 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 16:31:20.954 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 16:31:20.954 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 16:36:20.961 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 16:36:20.962 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 16:41:20.978 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 16:41:20.981 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 16:46:20.994 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 16:46:20.997 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 16:51:21.008 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 16:51:21.010 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 16:56:21.016 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 16:56:21.018 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 17:01:21.021 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 17:01:21.022 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 17:06:21.035 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 17:06:21.037 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 17:11:21.045 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 17:11:21.046 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 17:16:21.053 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 17:16:21.055 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 17:21:21.066 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 17:21:21.069 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 17:26:21.074 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 17:26:21.076 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 17:31:21.086 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 17:31:21.089 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 17:36:21.098 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 17:36:21.099 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 17:41:21.111 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 17:41:21.114 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 17:46:21.128 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 17:46:21.129 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 17:51:21.134 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 17:51:21.135 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 17:56:21.146 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 17:56:21.149 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 18:01:21.160 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 18:01:21.164 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 18:06:21.177 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 18:06:21.180 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 18:11:21.191 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 18:11:21.194 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 18:16:21.200 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 18:16:21.200 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 18:21:21.212 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 18:21:21.214 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 18:26:21.220 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 18:26:21.221 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 18:31:21.232 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 18:31:21.234 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 18:36:21.238 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 18:36:21.238 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 18:41:21.241 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 18:41:21.242 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-09 18:42:13.445 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_71]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_71]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_71]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-09 18:42:13.445 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-10 11:56:35.460 [Thread-2] WARN  c.dy.base.framework.esb.container.ContainerFactory - 未找到服务容器配置文件container.xml
+2018-12-10 11:56:35.463 [Thread-2] WARN  cn.dy.base.framework.esb.manage.imp.ManagerConfig - 未查找到对应的服务管理器配置文件manager.xml!
+2018-12-10 11:56:35.464 [Thread-2] WARN  c.dy.base.framework.esb.container.ContainerFactory - 未找到服务容器配置文件container.xml
+2018-12-10 11:56:35.474 [Thread-2] WARN  cn.dy.base.framework.esb.call.imp.CallerConfigImp - 未查找到对应的服务调用器配置文件caller.xml!
+2018-12-10 11:56:35.480 [Thread-2] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_45]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_45]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_45]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.init(PubDataDict.java:58) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.DataDictFactory.getFactory(DataDictFactory.java:61) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.DataDictFactory.getXMLFactory(DataDictFactory.java:107) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.rmi.RmiNatManager.init(RmiNatManager.java:38) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.rmi.RmiNatManager.<init>(RmiNatManager.java:74) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.rmi.RmiNatManager.create(RmiNatManager.java:81) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.container.imp.ServiceContainerImp.getRmiUrl(ServiceContainerImp.java:353) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.call.imp.ServiceAgentImp.setLocalServiceContainer(ServiceAgentImp.java:62) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.ServiceEngineImp.<init>(ServiceEngineImp.java:33) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.ServiceEngineImp.create(ServiceEngineImp.java:47) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$1.run(PubDataDict.java:70) [geronimo-javamail_mimi_f.jar:na]
+2018-12-10 11:56:35.480 [Thread-2] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-10 11:56:35.481 [Thread-2] WARN  cn.dy.base.framework.esb.rmi.RmiNatManager - 
+java.lang.NullPointerException: null
+	at cn.dy.base.framework.esb.rmi.RmiNatManager.init(RmiNatManager.java:38) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.rmi.RmiNatManager.<init>(RmiNatManager.java:74) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.rmi.RmiNatManager.create(RmiNatManager.java:81) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.container.imp.ServiceContainerImp.getRmiUrl(ServiceContainerImp.java:353) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.call.imp.ServiceAgentImp.setLocalServiceContainer(ServiceAgentImp.java:62) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.ServiceEngineImp.<init>(ServiceEngineImp.java:33) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.ServiceEngineImp.create(ServiceEngineImp.java:47) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$1.run(PubDataDict.java:70) [geronimo-javamail_mimi_f.jar:na]
+2018-12-10 11:56:35.481 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - started...
+2018-12-10 11:56:35.536 [Thread-2] WARN  cn.dy.base.framework.dict.PubDataDict - SystemUtil.getLocalIPs().size1
+2018-12-10 11:56:35.536 [Thread-2] WARN  cn.dy.base.framework.dict.PubDataDict - SystemUtil.getLocalIPs()192.168.1.16
+2018-12-10 11:56:35.545 [Thread-2] WARN  cn.dy.base.framework.esb.rmi.RmiServer - 
+java.lang.NullPointerException: null
+	at java.util.Hashtable.put(Hashtable.java:514) ~[na:1.7.0_45]
+	at java.util.Properties.setProperty(Properties.java:161) ~[na:1.7.0_45]
+	at java.lang.System.setProperty(System.java:787) ~[na:1.7.0_45]
+	at cn.dy.base.framework.esb.rmi.StarNetIctRmiServer.publish(StarNetIctRmiServer.java:97) ~[geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.rmi.RmiServer.publish(RmiServer.java:28) ~[geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$1.run(PubDataDict.java:80) [geronimo-javamail_mimi_f.jar:na]
+2018-12-10 11:56:35.546 [Thread-2] WARN  cn.dy.base.framework.dict.PubDataDict - publish rmi://192.168.1.16:8686/DB/cn.dy.base.framework.dict.IRemoteDict use instance [cn.dy.base.framework.dict.DBDataDict@5b29297f|cn.dy.base.framework.dict.DBDataDict]
+2018-12-10 11:57:35.483 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_45]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_45]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_45]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-10 11:57:35.483 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-10 12:00:30.744 [Thread-2] WARN  c.dy.base.framework.esb.container.ContainerFactory - 未找到服务容器配置文件container.xml
+2018-12-10 12:00:30.748 [Thread-2] WARN  cn.dy.base.framework.esb.manage.imp.ManagerConfig - 未查找到对应的服务管理器配置文件manager.xml!
+2018-12-10 12:00:30.749 [Thread-2] WARN  c.dy.base.framework.esb.container.ContainerFactory - 未找到服务容器配置文件container.xml
+2018-12-10 12:00:30.762 [Thread-2] WARN  cn.dy.base.framework.esb.call.imp.CallerConfigImp - 未查找到对应的服务调用器配置文件caller.xml!
+2018-12-10 12:00:30.771 [Thread-2] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_45]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_45]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_45]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.init(PubDataDict.java:58) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.DataDictFactory.getFactory(DataDictFactory.java:61) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.DataDictFactory.getXMLFactory(DataDictFactory.java:107) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.rmi.RmiNatManager.init(RmiNatManager.java:38) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.rmi.RmiNatManager.<init>(RmiNatManager.java:74) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.rmi.RmiNatManager.create(RmiNatManager.java:81) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.container.imp.ServiceContainerImp.getRmiUrl(ServiceContainerImp.java:353) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.call.imp.ServiceAgentImp.setLocalServiceContainer(ServiceAgentImp.java:62) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.ServiceEngineImp.<init>(ServiceEngineImp.java:33) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.ServiceEngineImp.create(ServiceEngineImp.java:47) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$1.run(PubDataDict.java:70) [geronimo-javamail_mimi_f.jar:na]
+2018-12-10 12:00:30.771 [Thread-2] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-10 12:00:30.772 [Thread-2] WARN  cn.dy.base.framework.esb.rmi.RmiNatManager - 
+java.lang.NullPointerException: null
+	at cn.dy.base.framework.esb.rmi.RmiNatManager.init(RmiNatManager.java:38) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.rmi.RmiNatManager.<init>(RmiNatManager.java:74) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.rmi.RmiNatManager.create(RmiNatManager.java:81) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.container.imp.ServiceContainerImp.getRmiUrl(ServiceContainerImp.java:353) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.call.imp.ServiceAgentImp.setLocalServiceContainer(ServiceAgentImp.java:62) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.ServiceEngineImp.<init>(ServiceEngineImp.java:33) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.ServiceEngineImp.create(ServiceEngineImp.java:47) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$1.run(PubDataDict.java:70) [geronimo-javamail_mimi_f.jar:na]
+2018-12-10 12:00:30.775 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - started...
+2018-12-10 12:00:33.242 [Thread-2] WARN  cn.dy.base.framework.dict.PubDataDict - SystemUtil.getLocalIPs().size1
+2018-12-10 12:00:33.244 [Thread-2] WARN  cn.dy.base.framework.dict.PubDataDict - SystemUtil.getLocalIPs()192.168.1.16
+2018-12-10 12:00:38.622 [Thread-2] WARN  cn.dy.base.framework.esb.rmi.RmiServer - 
+java.lang.NullPointerException: null
+	at java.util.Hashtable.put(Hashtable.java:514) ~[na:1.7.0_45]
+	at java.util.Properties.setProperty(Properties.java:161) ~[na:1.7.0_45]
+	at java.lang.System.setProperty(System.java:787) ~[na:1.7.0_45]
+	at cn.dy.base.framework.esb.rmi.StarNetIctRmiServer.publish(StarNetIctRmiServer.java:97) ~[geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.rmi.RmiServer.publish(RmiServer.java:28) ~[geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$1.run(PubDataDict.java:80) [geronimo-javamail_mimi_f.jar:na]
+2018-12-10 12:00:38.622 [Thread-2] WARN  cn.dy.base.framework.dict.PubDataDict - publish rmi://192.168.1.16:8686/DB/cn.dy.base.framework.dict.IRemoteDict use instance [cn.dy.base.framework.dict.DBDataDict@37031ba1|cn.dy.base.framework.dict.DBDataDict]
+2018-12-10 12:01:30.779 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_45]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_45]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_45]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-10 12:01:30.780 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-10 12:06:30.784 [ReloadDataDictThread] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_45]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_45]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_45]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$ReloadThread.run(PubDataDict.java:143) [geronimo-javamail_mimi_f.jar:na]
+2018-12-10 12:06:30.785 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-10 12:07:41.313 [Thread-2] WARN  c.dy.base.framework.esb.container.ContainerFactory - 未找到服务容器配置文件container.xml
+2018-12-10 12:07:41.316 [Thread-2] WARN  cn.dy.base.framework.esb.manage.imp.ManagerConfig - 未查找到对应的服务管理器配置文件manager.xml!
+2018-12-10 12:07:41.317 [Thread-2] WARN  c.dy.base.framework.esb.container.ContainerFactory - 未找到服务容器配置文件container.xml
+2018-12-10 12:07:41.331 [Thread-2] WARN  cn.dy.base.framework.esb.call.imp.CallerConfigImp - 未查找到对应的服务调用器配置文件caller.xml!
+2018-12-10 12:59:14.242 [Thread-2] ERROR cn.dy.base.framework.dict.XMLDataDict - load data dict config file error: 
+java.io.FileNotFoundException: datadict.xml (系统找不到指定的文件。)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.7.0_45]
+	at java.io.FileInputStream.<init>(FileInputStream.java:146) ~[na:1.7.0_45]
+	at java.io.FileReader.<init>(FileReader.java:72) ~[na:1.7.0_45]
+	at org.dom4j.io.XPP3Reader.read(XPP3Reader.java:83) ~[dom4j-1.6.1.jar:1.6.1]
+	at cn.dy.base.framework.dict.XMLDataDict.readConfig(XMLDataDict.java:179) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.XMLDataDict.getDictItems(XMLDataDict.java:151) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.load2memo(PubDataDict.java:162) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict.init(PubDataDict.java:58) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.DataDictFactory.getFactory(DataDictFactory.java:61) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.DataDictFactory.getXMLFactory(DataDictFactory.java:107) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.rmi.RmiNatManager.init(RmiNatManager.java:38) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.rmi.RmiNatManager.<init>(RmiNatManager.java:74) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.rmi.RmiNatManager.create(RmiNatManager.java:81) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.container.imp.ServiceContainerImp.getRmiUrl(ServiceContainerImp.java:353) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.call.imp.ServiceAgentImp.setLocalServiceContainer(ServiceAgentImp.java:62) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.ServiceEngineImp.<init>(ServiceEngineImp.java:33) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.ServiceEngineImp.create(ServiceEngineImp.java:47) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$1.run(PubDataDict.java:70) [geronimo-javamail_mimi_f.jar:na]
+2018-12-10 12:59:14.242 [Thread-2] WARN  cn.dy.base.framework.dict.PubDataDict - =========== load XML fail and wait 5 min to reload===========
+2018-12-10 12:59:14.243 [Thread-2] WARN  cn.dy.base.framework.esb.rmi.RmiNatManager - 
+java.lang.NullPointerException: null
+	at cn.dy.base.framework.esb.rmi.RmiNatManager.init(RmiNatManager.java:38) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.rmi.RmiNatManager.<init>(RmiNatManager.java:74) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.rmi.RmiNatManager.create(RmiNatManager.java:81) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.container.imp.ServiceContainerImp.getRmiUrl(ServiceContainerImp.java:353) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.call.imp.ServiceAgentImp.setLocalServiceContainer(ServiceAgentImp.java:62) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.ServiceEngineImp.<init>(ServiceEngineImp.java:33) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.ServiceEngineImp.create(ServiceEngineImp.java:47) [geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$1.run(PubDataDict.java:70) [geronimo-javamail_mimi_f.jar:na]
+2018-12-10 12:59:14.243 [ReloadDataDictThread] WARN  cn.dy.base.framework.dict.PubDataDict - started...
+2018-12-10 12:59:14.291 [Thread-2] WARN  cn.dy.base.framework.dict.PubDataDict - SystemUtil.getLocalIPs().size1
+2018-12-10 12:59:14.291 [Thread-2] WARN  cn.dy.base.framework.dict.PubDataDict - SystemUtil.getLocalIPs()192.168.1.16
+2018-12-10 12:59:14.296 [Thread-2] WARN  cn.dy.base.framework.esb.rmi.RmiServer - 
+java.lang.NullPointerException: null
+	at java.util.Hashtable.put(Hashtable.java:514) ~[na:1.7.0_45]
+	at java.util.Properties.setProperty(Properties.java:161) ~[na:1.7.0_45]
+	at java.lang.System.setProperty(System.java:787) ~[na:1.7.0_45]
+	at cn.dy.base.framework.esb.rmi.StarNetIctRmiServer.publish(StarNetIctRmiServer.java:97) ~[geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.esb.rmi.RmiServer.publish(RmiServer.java:28) ~[geronimo-javamail_mimi_f.jar:na]
+	at cn.dy.base.framework.dict.PubDataDict$1.run(PubDataDict.java:80) [geronimo-javamail_mimi_f.jar:na]
+2018-12-10 12:59:14.296 [Thread-2] WARN  cn.dy.base.framework.dict.PubDataDict - publish rmi://192.168.1.16:8686/DB/cn.dy.base.framework.dict.IRemoteDict use instance [cn.dy.base.framework.dict.DBDataDict@519d5d83|cn.dy.base.framework.dict.DBDataDict]
+2018-12-10 13:34:57.496 [Thread-2] WARN  c.dy.base.framework.esb.container.ContainerFactory - 未找到服务容器配置文件container.xml
+2018-12-10 13:34:57.508 [Thread-2] WARN  cn.dy.base.framework.esb.manage.imp.ManagerConfig - 未查找到对应的服务管理器配置文件manager.xml!
+2018-12-10 13:34:57.512 [Thread-2] WARN  c.dy.base.framework.esb.container.ContainerFactory - 未找到服务容器配置文件container.xml
+2018-12-10 13:34:57.549 [Thread-2] WARN  cn.dy.base.framework.esb.call.imp.CallerConfigImp - 未查找到对应的服务调用器配置文件caller.xml!
+2018-12-10 13:48:20.670 [Thread-2] WARN  c.dy.base.framework.esb.container.ContainerFactory - 未找到服务容器配置文件container.xml
+2018-12-10 13:48:20.674 [Thread-2] WARN  cn.dy.base.framework.esb.manage.imp.ManagerConfig - 未查找到对应的服务管理器配置文件manager.xml!
+2018-12-10 13:48:20.675 [Thread-2] WARN  c.dy.base.framework.esb.container.ContainerFactory - 未找到服务容器配置文件container.xml
+2018-12-10 13:48:20.685 [Thread-2] WARN  cn.dy.base.framework.esb.call.imp.CallerConfigImp - 未查找到对应的服务调用器配置文件caller.xml!
+2018-12-10 13:48:31.953 [Thread-2] WARN  cn.dy.base.framework.dict.DataDictFactory - set cn.dy.base.framework.dict.XMLDataDict dict=cn.dy.base.framework.dict.XMLDataDict@3442ec38
+2018-12-10 13:48:32.932 [Thread-2] WARN  cn.dy.base.framework.dict.PubDataDict - SystemUtil.getLocalIPs().size1
+2018-12-10 13:48:32.932 [Thread-2] WARN  cn.dy.base.framework.dict.PubDataDict - SystemUtil.getLocalIPs()192.168.1.16
+2018-12-10 13:48:33.047 [Thread-2] WARN  cn.dy.base.framework.dict.PubDataDict - publish rmi://192.168.1.16:8686/DB/cn.dy.base.framework.dict.IRemoteDict use instance [cn.dy.base.framework.dict.DBDataDict@6dc4af44|cn.dy.base.framework.dict.DBDataDict]
+2018-12-10 13:48:38.988 [Thread-5] WARN  cn.dy.base.framework.dict.PubDataDict - SystemUtil.getLocalIPs().size1
+2018-12-10 13:48:38.988 [Thread-5] WARN  cn.dy.base.framework.dict.PubDataDict - SystemUtil.getLocalIPs()192.168.1.16
+2018-12-10 13:48:38.993 [Thread-5] WARN  cn.dy.base.framework.dict.PubDataDict - publish rmi://192.168.1.16:8686/XML/cn.dy.base.framework.dict.IRemoteDict use instance [cn.dy.base.framework.dict.XMLDataDict@3442ec38|cn.dy.base.framework.dict.XMLDataDict]
+2018-12-10 13:52:20.074 [Thread-2] WARN  c.dy.base.framework.esb.container.ContainerFactory - 未找到服务容器配置文件container.xml
+2018-12-10 16:56:54.649 [Thread-2] WARN  c.dy.base.framework.esb.container.ContainerFactory - 未找到服务容器配置文件container.xml
